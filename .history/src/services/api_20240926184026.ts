@@ -20,7 +20,7 @@ export const generateAccessToken = async (): Promise<string> => {
     },
   });
 
-  if (response.status !== 200) {
+  if (!response.ok) {
     throw new Error("Failed to fetch access token");
   }
 
@@ -28,7 +28,7 @@ export const generateAccessToken = async (): Promise<string> => {
 };
 
 export const getCountries = async (token: string): Promise<Country[]> => {
-  const response = await fetch(`${API_BASE_URL}/challenges/countries`, {
+  const response = await fetch(`your_api_endpoint`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${token}`,
@@ -41,14 +41,14 @@ export const getCountries = async (token: string): Promise<Country[]> => {
   }
 
   const data = await response.json();
-  console.log(data, "response");
+
   return data;
 };
 
 export const sendTwoFactorAuth = async (
   token: string,
-  phoneNumber: string,
-  countryId: string
+  phoneNumber: number,
+  countryId: number
 ) => {
   const response = await axios.post(
     `${API_BASE_URL}/challenges/two_factor_auth`,

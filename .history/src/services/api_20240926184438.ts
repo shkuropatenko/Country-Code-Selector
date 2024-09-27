@@ -36,19 +36,21 @@ export const getCountries = async (token: string): Promise<Country[]> => {
     },
   });
 
+  console.log(response, "response");
+
   if (!response.ok) {
     throw new Error("Failed to fetch countries");
   }
 
   const data = await response.json();
-  console.log(data, "response");
+
   return data;
 };
 
 export const sendTwoFactorAuth = async (
   token: string,
-  phoneNumber: string,
-  countryId: string
+  phoneNumber: number,
+  countryId: number
 ) => {
   const response = await axios.post(
     `${API_BASE_URL}/challenges/two_factor_auth`,

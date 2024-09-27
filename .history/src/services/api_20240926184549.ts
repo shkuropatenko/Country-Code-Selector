@@ -42,13 +42,13 @@ export const getCountries = async (token: string): Promise<Country[]> => {
 
   const data = await response.json();
   console.log(data, "response");
-  return data;
+  return [data];
 };
 
 export const sendTwoFactorAuth = async (
   token: string,
-  phoneNumber: string,
-  countryId: string
+  phoneNumber: number,
+  countryId: number
 ) => {
   const response = await axios.post(
     `${API_BASE_URL}/challenges/two_factor_auth`,
