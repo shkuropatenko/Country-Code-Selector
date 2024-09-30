@@ -27,3 +27,18 @@ To set up the project on your local machine, follow these steps:
 1. **Clone the repository**: First, you need to get the project files on your local machine by cloning the repository.
    ```bash
    git clone https://github.com/shkuropatenko/Country-Code-Selector.git
+2. **Navigate to the Project Directory**
+   ```bash
+   cd Country-Code-Selector
+3. **Install Dependencies:**: Use npm (or yarn) to install.
+   ```bash
+  npm install OR yarn install
+4. **Start the Development Server:**: After install.
+   ```bash
+  npm run start OR yarn start
+
+## Usage
+1. **Select a Country**: Click on the country flag selector to open the dropdown menu. You can either scroll through the list or use the search field to find your desired country quickly.
+2. **Enter Phone Number**: Once you select a country, the phone number input field will update its placeholder and validation rules according to the selected country’s phone number format. Enter your phone number in the provided format.
+3. **Submit the Form**: After filling in the phone number, click the "Submit" button. The application will send the phone number and country ID to the SoftPoint developer API for two-factor authentication.
+
