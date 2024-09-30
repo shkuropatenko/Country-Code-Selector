@@ -35,7 +35,7 @@ To set up the project on your local machine, follow these steps:
    npm install OR yarn install
 4. **Start the Development Server:**: After install.
    ```bash
-   npm run start OR yarn start
+   npm start OR yarn start
 
 ## Usage
 1. **Select a Country**: Click on the country flag selector to open the dropdown menu. You can either scroll through the list or use the search field to find your desired country quickly.
