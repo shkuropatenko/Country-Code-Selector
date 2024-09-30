@@ -32,10 +32,10 @@ To set up the project on your local machine, follow these steps:
    cd Country-Code-Selector
 3. **Install Dependencies:**: Use npm (or yarn) to install.
    ```bash
-  npm install OR yarn install
+   npm install OR yarn install
 4. **Start the Development Server:**: After install.
    ```bash
-  npm run start OR yarn start
+   npm run start OR yarn start
 
 ## Usage
 1. **Select a Country**: Click on the country flag selector to open the dropdown menu. You can either scroll through the list or use the search field to find your desired country quickly.
