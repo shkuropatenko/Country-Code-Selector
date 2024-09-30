@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es6", // или "esnext", если ваш проект поддерживает более современные браузеры
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": false, // отключите, если не используете JavaScript
-    "skipLibCheck": false, // включите для строгой проверки библиотек
+    "allowJs": false,
+    "skipLibCheck": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true, // оставьте включенным для строгой проверки типов, но можете отключить временно
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",

@@ -1,4 +1,3 @@
-// src/context/AppContext.tsx
 import React, { createContext, useState, useEffect } from "react";
 import { generateAccessToken, getCountries } from "../services/api";
 

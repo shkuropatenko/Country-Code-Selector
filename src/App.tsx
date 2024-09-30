@@ -1,4 +1,3 @@
-// src/App.tsx
 import React from "react";
 import { AppProvider } from "./context/AppContext";
 import CountrySelector from "./components/CountrySelector/CountrySelector";
@@ -14,18 +13,24 @@ const App: React.FC = () => {
       <FormProvider {...methods}>
         <Box
           sx={{
-            maxWidth: "360px",
-            margin: "0 auto",
             padding: "20px",
-            border: "1px solid #ccc",
-            borderRadius: "20px",
-            width: "100%",
           }}
         >
-          <Typography variant="h5" sx={{ mb: 2, textAlign: "center" }}>
-            Two Factor Authentication
-          </Typography>
-          <CountrySelector />
+          <Box
+            sx={{
+              maxWidth: "360px",
+              margin: "40px auto",
+              padding: "20px",
+              border: "1px solid #ccc",
+              borderRadius: "20px",
+              width: "100%",
+            }}
+          >
+            <Typography variant="h5" sx={{ mb: 2, textAlign: "center" }}>
+              Two Factor Authentication
+            </Typography>
+            <CountrySelector />
+          </Box>
         </Box>
       </FormProvider>
     </AppProvider>

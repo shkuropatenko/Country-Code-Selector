@@ -18,15 +18,10 @@ import { countryCodes } from "./countryCodes";
 const CountrySelector: React.FC = () => {
   const { countries, loading, error } = useContext(AppContext);
   const methods = useForm();
-
-  // Determine if countries is an object or an array
   const countryArray = Array.isArray(countries)
     ? countries
     : Object.values(countries);
-
-  // Find the default country (USA)
   const defaultCountry = Array.isArray(countries) ? null : countries["USA"];
-
   const [selectedCountry, setSelectedCountry] = useState<any | null>(
     defaultCountry
   );
@@ -96,7 +91,6 @@ const CountrySelector: React.FC = () => {
         country
       );
 
-      console.log("API Response: ", response);
       setSnackbar({
         open: true,
         message: "Two Factor Auth sent successfully!",
@@ -177,21 +171,18 @@ const CountrySelector: React.FC = () => {
                     options={countryArray}
                     getOptionLabel={(option) => option.name || ""}
                     onChange={handleCountrySelect}
-                    onClose={() => setAutocompleteOpen(false)} // Close autocomplete when an option is selected
+                    onClose={() => setAutocompleteOpen(false)}
                     renderOption={(props, option) => {
                       const code = countryCodes.find(
                         (c) =>
                           c.callingCode === option.calling_code.replace("+", "")
                       );
-
-                      // Extracting key from props to avoid spreading it
                       const { key, ...otherProps } = props;
-
                       return (
                         <Box
                           component="li"
-                          key={key} // Pass the key directly here
-                          {...otherProps} // Spread the remaining props
+                          key={key}
+                          {...otherProps}
                           sx={{ display: "flex", alignItems: "center" }}
                         >
                           <Avatar

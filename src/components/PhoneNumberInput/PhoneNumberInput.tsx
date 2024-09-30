@@ -1,4 +1,3 @@
-// src/components/PhoneNumberInput/PhoneNumberInput.tsx
 import React from "react";
 import MaskedInput from "react-text-mask";
 import { Typography, Box } from "@mui/material";

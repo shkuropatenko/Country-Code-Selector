@@ -1,4 +1,3 @@
-// src/services/api.ts
 import axios from "axios";
 
 interface Country {
@@ -42,14 +41,14 @@ export const getCountries = async (token: string): Promise<Country[]> => {
   }
 
   const data = await response.json();
-  console.log(data, "response");
+
   return data;
 };
 
 export const sendTwoFactorAuth = async (
   token: string,
-  phoneNumber: string, // Изменено на string
-  countryId: string // Изменено на string
+  phoneNumber: string,
+  countryId: string
 ) => {
   const response = await axios.post(
     `${API_BASE_URL}/challenges/two_factor_auth`,

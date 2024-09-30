@@ -16,21 +16,6 @@ code {
     monospace;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .form > div {
   position: relative;
 }
@@ -40,8 +25,8 @@ code {
   left: -3px;
   right: -3px;
   top: 100%;
-  margin-top: -12px;
+  margin-top: -20px;
   background: #fff;
   z-index: 1;
-  padding: 0 3px;
+  padding: 6px 3px 0;
 }
